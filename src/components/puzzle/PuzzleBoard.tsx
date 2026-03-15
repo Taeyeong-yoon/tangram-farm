@@ -1,9 +1,12 @@
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import type { PuzzleLevel } from '@/types/puzzle.types';
 import { usePuzzleStore } from '@/stores/puzzleStore';
 import PuzzlePiece from './PuzzlePiece';
 
-const BOARD_SIZE = 400;
+export const BOARD_W = 560;
+export const BOARD_H = 560;
+export const TRAY_H = 170;
+export const TOTAL_H = BOARD_H + TRAY_H;
 
 interface PuzzleBoardProps {
   level: PuzzleLevel;
@@ -11,50 +14,35 @@ interface PuzzleBoardProps {
 
 export default function PuzzleBoard({ level }: PuzzleBoardProps) {
   const { pieces, selectPiece } = usePuzzleStore();
-  const boardRef = useRef<SVGSVGElement>(null);
-  const boardOffset = { x: 0, y: 0 };
-
-  useEffect(() => {
-    if (boardRef.current) {
-      const rect = boardRef.current.getBoundingClientRect();
-      boardOffset.x = rect.left;
-      boardOffset.y = rect.top;
-    }
-  });
+  const svgRef = useRef<SVGSVGElement>(null);
 
   return (
-    <div className="puzzle-board-container" style={{ width: '100%', maxWidth: BOARD_SIZE, margin: '0 auto' }}>
+    <div style={{ width: '100%' }}>
       <svg
-        ref={boardRef}
+        ref={svgRef}
         width="100%"
-        viewBox={`0 0 ${BOARD_SIZE} ${BOARD_SIZE + 160}`}
-        style={{ display: 'block', background: '#1a1a2e', borderRadius: 16, touchAction: 'none' }}
-        onClick={() => selectPiece(null)}
+        viewBox={`0 0 ${BOARD_W} ${TOTAL_H}`}
+        style={{ display: 'block', borderRadius: 20, touchAction: 'none', background: '#0d1b2e' }}
+        onPointerDown={(e) => { if (e.target === e.currentTarget) selectPiece(null); }}
       >
-        {/* Board background */}
-        <rect x={0} y={0} width={BOARD_SIZE} height={BOARD_SIZE} fill="#16213e" rx={12} />
-
-        {/* Target silhouette */}
-        <g transform={`translate(${BOARD_SIZE / 2 - 100}, ${BOARD_SIZE / 2 - 100})`}>
-          <path
-            d={level.targetShape.outline}
-            fill="rgba(255,255,255,0.06)"
-            stroke="rgba(255,255,255,0.25)"
-            strokeWidth={2}
-            strokeDasharray="6,4"
-          />
+        <rect x={0} y={0} width={BOARD_W} height={BOARD_H} fill="#0d1b2e" />
+        <rect x={4} y={4} width={BOARD_W - 8} height={BOARD_H - 8}
+          fill="none" stroke="rgba(255,255,255,0.04)" strokeWidth={1} rx={8} />
+        <g transform={`translate(${BOARD_W / 2 - 100}, ${BOARD_H / 2 - 100})`}>
+          <path d={level.targetShape.outline}
+            fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.3)"
+            strokeWidth={2} strokeDasharray="8,5" />
         </g>
-
-        {/* Puzzle pieces */}
-        {pieces.map((piece) => (
-          <PuzzlePiece key={piece.id} piece={piece} boardOffset={boardOffset} />
-        ))}
-
-        {/* Tray separator */}
-        <line x1={0} y1={BOARD_SIZE + 10} x2={BOARD_SIZE} y2={BOARD_SIZE + 10} stroke="rgba(255,255,255,0.1)" strokeWidth={1} />
-        <text x={BOARD_SIZE / 2} y={BOARD_SIZE + 28} textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize={11}>
-          조각을 드래그하거나 탭하여 회전하세요
+        <line x1={0} y1={BOARD_H} x2={BOARD_W} y2={BOARD_H}
+          stroke="rgba(255,255,255,0.1)" strokeWidth={1} />
+        <rect x={0} y={BOARD_H} width={BOARD_W} height={TRAY_H} fill="rgba(0,0,0,0.25)" />
+        <text x={BOARD_W / 2} y={BOARD_H + 20}
+          textAnchor="middle" fill="rgba(255,255,255,0.3)" fontSize={12}>
+          드래그로 이동 · 탭으로 45° 회전
         </text>
+        {pieces.map((piece) => (
+          <PuzzlePiece key={piece.id} piece={piece} svgRef={svgRef} />
+        ))}
       </svg>
     </div>
   );

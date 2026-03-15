@@ -85,7 +85,7 @@
 
 .app-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+  grid-template-columns: minmax(0, 1.6fr) minmax(320px, 0.8fr);
   gap: 20px;
   align-items: start;
 }
@@ -93,7 +93,7 @@
 .puzzle-shell,
 .farm-panel {
   border-radius: 28px;
-  padding: 20px;
+  padding: 16px;
 }
 
 .panel-header {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FarmView } from '@/components/farm/FarmView';
 import HintOverlay from '@/components/puzzle/HintOverlay';
-import PieceTray from '@/components/puzzle/PieceTray';
+
 import PuzzleBoard from '@/components/puzzle/PuzzleBoard';
 import PuzzleHUD from '@/components/puzzle/PuzzleHUD';
 import SuccessModal from '@/components/puzzle/SuccessModal';
@@ -103,7 +103,7 @@ export default function App() {
               </div>
               <PuzzleHUD onHint={handleHint} onReset={resetPuzzle} />
               <PuzzleBoard level={currentLevel} />
-              <PieceTray />
+
             </>
           ) : null}
         </section>

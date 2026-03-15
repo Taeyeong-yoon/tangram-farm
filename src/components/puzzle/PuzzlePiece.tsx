@@ -1,4 +1,4 @@
-import { useRef, useCallback } from 'react';
+import { useRef, useCallback, type RefObject } from 'react';
 import type { PieceState } from '@/types/puzzle.types';
 import { PIECE_DEFINITIONS } from '@/data/pieces';
 import { transformPolygon, translatePolygon, pointsToSvgString } from '@/engines/puzzle/PieceTransform';
@@ -6,13 +6,23 @@ import { usePuzzleStore } from '@/stores/puzzleStore';
 
 interface PuzzlePieceProps {
   piece: PieceState;
-  boardOffset: { x: number; y: number };
+  svgRef: RefObject<SVGSVGElement | null>;
 }
 
-export default function PuzzlePiece({ piece }: PuzzlePieceProps) {
+function toSvgCoords(svg: SVGSVGElement, clientX: number, clientY: number) {
+  const pt = svg.createSVGPoint();
+  pt.x = clientX;
+  pt.y = clientY;
+  const ctm = svg.getScreenCTM();
+  if (!ctm) return { x: clientX, y: clientY };
+  return pt.matrixTransform(ctm.inverse());
+}
+
+export default function PuzzlePiece({ piece, svgRef }: PuzzlePieceProps) {
   const { selectPiece, movePiece, rotatePiece, selectedPieceId } = usePuzzleStore();
   const isSelected = selectedPieceId === piece.id;
-  const dragStart = useRef<{ clientX: number; clientY: number; pieceX: number; pieceY: number } | null>(null);
+  const dragStart = useRef<{ svgX: number; svgY: number; pieceX: number; pieceY: number } | null>(null);
+  const didMove = useRef(false);
 
   const def = PIECE_DEFINITIONS[piece.id];
   if (!def) return null;
@@ -21,66 +31,59 @@ export default function PuzzlePiece({ piece }: PuzzlePieceProps) {
   const translated = translatePolygon(transformed, piece.x, piece.y);
   const pointsStr = pointsToSvgString(translated);
 
-  // Center of piece for rotation tap detection
   const cx = translated.reduce((s, p) => s + p.x, 0) / translated.length;
   const cy = translated.reduce((s, p) => s + p.y, 0) / translated.length;
 
-  function getClientPos(e: React.MouseEvent | React.TouchEvent) {
-    if ('touches' in e) {
-      return { clientX: e.touches[0].clientX, clientY: e.touches[0].clientY };
-    }
-    return { clientX: e.clientX, clientY: e.clientY };
-  }
-
-  const handlePointerDown = useCallback((e: React.MouseEvent | React.TouchEvent) => {
+  const handlePointerDown = useCallback((e: React.PointerEvent<SVGGElement>) => {
     e.preventDefault();
+    e.stopPropagation();
+    e.currentTarget.setPointerCapture(e.pointerId);
     selectPiece(piece.id);
-    const { clientX, clientY } = getClientPos(e);
-    dragStart.current = { clientX, clientY, pieceX: piece.x, pieceY: piece.y };
-  }, [piece.id, piece.x, piece.y, selectPiece]);
+    didMove.current = false;
+    if (!svgRef.current) return;
+    const { x, y } = toSvgCoords(svgRef.current, e.clientX, e.clientY);
+    dragStart.current = { svgX: x, svgY: y, pieceX: piece.x, pieceY: piece.y };
+  }, [piece.id, piece.x, piece.y, selectPiece, svgRef]);
 
-  const handlePointerMove = useCallback((e: React.MouseEvent | React.TouchEvent) => {
-    if (!dragStart.current) return;
+  const handlePointerMove = useCallback((e: React.PointerEvent<SVGGElement>) => {
+    if (!dragStart.current || !svgRef.current) return;
     e.preventDefault();
-    const { clientX, clientY } = getClientPos(e);
-    const dx = clientX - dragStart.current.clientX;
-    const dy = clientY - dragStart.current.clientY;
+    const { x, y } = toSvgCoords(svgRef.current, e.clientX, e.clientY);
+    const dx = x - dragStart.current.svgX;
+    const dy = y - dragStart.current.svgY;
+    if (Math.abs(dx) > 3 || Math.abs(dy) > 3) didMove.current = true;
     movePiece(piece.id, dragStart.current.pieceX + dx, dragStart.current.pieceY + dy);
-  }, [piece.id, movePiece]);
+  }, [piece.id, movePiece, svgRef]);
 
-  const handlePointerUp = useCallback(() => {
-    dragStart.current = null;
-  }, []);
-
-  const handleTap = useCallback((e: React.MouseEvent) => {
-    if (isSelected) {
+  const handlePointerUp = useCallback((e: React.PointerEvent<SVGGElement>) => {
+    e.currentTarget.releasePointerCapture(e.pointerId);
+    // 드래그 없이 탭만 했으면 → 회전
+    if (!didMove.current) {
       rotatePiece(piece.id);
     }
-    e.stopPropagation();
-  }, [isSelected, piece.id, rotatePiece]);
+    dragStart.current = null;
+  }, [piece.id, rotatePiece]);
 
   return (
     <g
-      className="puzzle-piece"
       style={{ cursor: isSelected ? 'grabbing' : 'grab', touchAction: 'none', userSelect: 'none' }}
-      onMouseDown={handlePointerDown}
-      onMouseMove={handlePointerMove}
-      onMouseUp={handlePointerUp}
-      onTouchStart={handlePointerDown}
-      onTouchMove={handlePointerMove}
-      onTouchEnd={handlePointerUp}
-      onClick={handleTap}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
     >
+      {/* 넓은 투명 히트 영역 */}
+      <polygon points={pointsStr} fill="transparent" stroke="transparent" strokeWidth={16} />
+      {/* 시각적 조각 */}
       <polygon
         points={pointsStr}
         fill={def.color}
-        stroke={isSelected ? '#3B82F6' : '#fff'}
+        stroke={isSelected ? '#fff' : 'rgba(255,255,255,0.4)'}
         strokeWidth={isSelected ? 3 : 1.5}
-        opacity={isSelected ? 0.9 : 0.85}
-        transform={isSelected ? `scale(1.03, 1.03) translate(${-cx * 0.03}, ${-cy * 0.03})` : undefined}
+        opacity={isSelected ? 1 : 0.9}
+        filter={isSelected ? 'drop-shadow(0 0 10px rgba(255,255,255,0.5))' : undefined}
       />
       {isSelected && (
-        <circle cx={cx} cy={cy} r={4} fill="#3B82F6" opacity={0.7} pointerEvents="none" />
+        <circle cx={cx} cy={cy} r={5} fill="rgba(255,255,255,0.95)" pointerEvents="none" />
       )}
     </g>
   );

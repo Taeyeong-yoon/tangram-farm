@@ -11,7 +11,6 @@ interface PuzzleStore {
   startTime: number;
   elapsedMs: number;
 
-  // actions
   loadLevel: (level: PuzzleLevel) => void;
   selectPiece: (id: string | null) => void;
   movePiece: (id: string, x: number, y: number) => void;
@@ -23,18 +22,24 @@ interface PuzzleStore {
   tick: (ms: number) => void;
 }
 
+// BOARD_H=560, TRAY_H=170 → 트레이 y 범위: 560~730
 function buildInitialPieces(level: PuzzleLevel): PieceState[] {
-  // Place pieces in a tray area (below puzzle board, spread horizontally)
-  const trayY = 500;
-  return level.allowedPieces.map((id, i) => ({
-    id,
-    x: 40 + i * 80,
-    y: trayY,
-    rotation: 0,
-    flipped: false,
-    isPlaced: false,
-    isSelected: false,
-  }));
+  const n = level.allowedPieces.length;
+  const cols = Math.ceil(n / 2);
+  return level.allowedPieces.map((id, i) => {
+    const row = Math.floor(i / cols);
+    const col = i % cols;
+    const spacing = cols > 1 ? 460 / (cols - 1) : 0;
+    return {
+      id,
+      x: 50 + col * spacing,
+      y: 590 + row * 70,
+      rotation: 0,
+      flipped: false,
+      isPlaced: false,
+      isSelected: false,
+    };
+  });
 }
 
 export const usePuzzleStore = create<PuzzleStore>((set, get) => ({
@@ -80,7 +85,8 @@ export const usePuzzleStore = create<PuzzleStore>((set, get) => ({
   rotatePiece: (id) => {
     set((state) => {
       const newPieces = state.pieces.map((p) =>
-        p.id === id ? { ...p, rotation: (p.rotation + 90) % 360 } : p
+        // 45도씩 회전
+        p.id === id ? { ...p, rotation: (p.rotation + 45) % 360 } : p
       );
       const isComplete = state.currentLevel
         ? checkSolution(newPieces, state.currentLevel)

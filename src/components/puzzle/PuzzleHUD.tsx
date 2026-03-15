@@ -14,7 +14,7 @@ function formatTime(ms: number): string {
 }
 
 export default function PuzzleHUD({ onHint, onReset }: PuzzleHUDProps) {
-  const { currentLevel, hintsUsed, startTime, tick } = usePuzzleStore();
+  const { currentLevel, hintsUsed, startTime, tick, selectedPieceId, rotatePiece, flipPiece } = usePuzzleStore();
   const { getBestScore } = useProgressStore();
   const rafRef = useRef<number>(0);
 
@@ -30,49 +30,70 @@ export default function PuzzleHUD({ onHint, onReset }: PuzzleHUDProps) {
   const { elapsedMs } = usePuzzleStore.getState();
   const bestScore = currentLevel ? getBestScore(currentLevel.id) : 0;
   const maxHints = currentLevel?.hints.length ?? 0;
+  const hasSelected = selectedPieceId !== null;
 
   return (
     <div style={{
-      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      padding: '8px 16px', background: 'rgba(0,0,0,0.3)', borderRadius: 12, marginBottom: 8,
+      display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap',
+      padding: '10px 14px', background: 'rgba(0,0,0,0.35)', borderRadius: 14, marginBottom: 10,
     }}>
-      <div style={{ color: '#fff', fontSize: 13 }}>
-        <div style={{ opacity: 0.6, fontSize: 10 }}>레벨</div>
-        <div style={{ fontWeight: 700 }}>#{currentLevel?.id ?? '-'} {currentLevel?.nameKo}</div>
+      {/* 레벨 */}
+      <div style={{ color: '#fff', fontSize: 13, minWidth: 80 }}>
+        <div style={{ opacity: 0.5, fontSize: 10 }}>레벨</div>
+        <div style={{ fontWeight: 700 }}>#{currentLevel?.id} {currentLevel?.nameKo}</div>
       </div>
-      <div style={{ color: '#fff', fontSize: 13, textAlign: 'center' }}>
-        <div style={{ opacity: 0.6, fontSize: 10 }}>시간</div>
+
+      {/* 타이머 */}
+      <div style={{ color: '#fff', fontSize: 13, textAlign: 'center', flex: 1 }}>
+        <div style={{ opacity: 0.5, fontSize: 10 }}>시간</div>
         <div>{formatTime(elapsedMs)}</div>
       </div>
+
       {bestScore > 0 && (
         <div style={{ color: '#F5A623', fontSize: 13, textAlign: 'center' }}>
-          <div style={{ opacity: 0.6, fontSize: 10, color: '#fff' }}>최고</div>
+          <div style={{ opacity: 0.5, fontSize: 10, color: '#fff' }}>최고</div>
           <div>{bestScore}</div>
         </div>
       )}
-      <div style={{ display: 'flex', gap: 8 }}>
+
+      {/* 조각 조작 버튼 (선택된 조각이 있을 때) */}
+      {hasSelected && (
+        <div style={{ display: 'flex', gap: 6 }}>
+          <button
+            onClick={() => selectedPieceId && rotatePiece(selectedPieceId)}
+            style={btnStyle('#4f86c6')}
+            title="45° 회전"
+          >↺ 회전</button>
+          <button
+            onClick={() => selectedPieceId && flipPiece(selectedPieceId)}
+            style={btnStyle('#7ed321')}
+            title="좌우 뒤집기"
+          >⇌ 뒤집기</button>
+        </div>
+      )}
+
+      {/* 힌트 / 초기화 */}
+      <div style={{ display: 'flex', gap: 6 }}>
         <button
           onClick={onHint}
           disabled={hintsUsed >= maxHints}
-          style={{
-            background: hintsUsed >= maxHints ? 'rgba(255,255,255,0.05)' : 'rgba(245,166,35,0.2)',
-            border: '1px solid rgba(245,166,35,0.4)',
-            color: hintsUsed >= maxHints ? 'rgba(255,255,255,0.3)' : '#F5A623',
-            borderRadius: 8, padding: '6px 12px', fontSize: 12, cursor: hintsUsed >= maxHints ? 'not-allowed' : 'pointer',
-          }}
-        >
-          💡 힌트 ({maxHints - hintsUsed})
-        </button>
-        <button
-          onClick={onReset}
-          style={{
-            background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.2)',
-            color: 'rgba(255,255,255,0.7)', borderRadius: 8, padding: '6px 12px', fontSize: 12, cursor: 'pointer',
-          }}
-        >
-          ↺ 초기화
-        </button>
+          style={btnStyle('#F5A623', hintsUsed >= maxHints)}
+        >💡 ({maxHints - hintsUsed})</button>
+        <button onClick={onReset} style={btnStyle('rgba(255,255,255,0.3)')}>↺</button>
       </div>
     </div>
   );
+}
+
+function btnStyle(color: string, disabled = false): React.CSSProperties {
+  return {
+    background: `${color}22`,
+    border: `1px solid ${color}66`,
+    color: disabled ? 'rgba(255,255,255,0.3)' : '#fff',
+    borderRadius: 10,
+    padding: '7px 12px',
+    fontSize: 12,
+    cursor: disabled ? 'not-allowed' : 'pointer',
+    opacity: disabled ? 0.5 : 1,
+  };
 }
