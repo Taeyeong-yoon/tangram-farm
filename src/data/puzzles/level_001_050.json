@@ -1,0 +1,1375 @@
+[
+  {
+    "id": 1,
+    "theme": "object",
+    "name": "Square",
+    "nameKo": "사각형",
+    "difficulty": 1,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M50,50 L150,50 L150,150 L50,150 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "sm_tri_1", "x": 80, "y": 80, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 130, "y": 80, "rotation": 180, "flipped": false },
+      { "pieceId": "square", "x": 105, "y": 105, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 80, "y": 130, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "네모 모양을 만들어보세요" },
+      { "level": 2, "description": "가운데에 사각형 조각을 놓아보세요" },
+      { "level": 3, "description": "작은 삼각형 두 개가 위쪽을 채워요" }
+    ],
+    "reward": { "seeds": 2, "feed": 1 }
+  },
+  {
+    "id": 2,
+    "theme": "nature",
+    "name": "Mountain",
+    "nameKo": "산",
+    "difficulty": 1,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M100,30 L170,150 L30,150 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 60, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 65, "y": 130, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 140, "y": 130, "rotation": 90, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 130, "rotation": 45, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "sm_tri_1", "sm_tri_2", "square"],
+    "hints": [
+      { "level": 1, "description": "삼각형 모양이에요" },
+      { "level": 2, "description": "큰 삼각형이 위쪽에 와요" },
+      { "level": 3, "description": "아래 양쪽에 작은 삼각형을 배치하세요" }
+    ],
+    "reward": { "seeds": 2, "feed": 1 }
+  },
+  {
+    "id": 3,
+    "theme": "object",
+    "name": "Arrow",
+    "nameKo": "화살표",
+    "difficulty": 1,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M100,20 L160,90 L130,90 L130,170 L70,170 L70,90 L40,90 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 55, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 80, "y": 120, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 120, "y": 120, "rotation": 0, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 140, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "sm_tri_1", "sm_tri_2", "square"],
+    "hints": [
+      { "level": 1, "description": "위를 향하는 화살표에요" },
+      { "level": 2, "description": "큰 삼각형이 화살촉을 만들어요" },
+      { "level": 3, "description": "아래쪽 사각형이 화살표 몸통이에요" }
+    ],
+    "reward": { "seeds": 2, "feed": 1 }
+  },
+  {
+    "id": 4,
+    "theme": "nature",
+    "name": "Tree",
+    "nameKo": "나무",
+    "difficulty": 1,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M100,20 L155,100 L120,100 L120,170 L80,170 L80,100 L45,100 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 50, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 85, "y": 130, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 130, "rotation": 90, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 115, "y": 130, "rotation": 0, "flipped": true }
+    ],
+    "allowedPieces": ["big_tri_1", "sm_tri_1", "sm_tri_2", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "나무 모양이에요" },
+      { "level": 2, "description": "큰 삼각형이 나뭇잎이에요" },
+      { "level": 3, "description": "긴 직사각형이 나무 줄기가 돼요" }
+    ],
+    "reward": { "seeds": 2, "feed": 1 }
+  },
+  {
+    "id": 5,
+    "theme": "object",
+    "name": "House",
+    "nameKo": "집",
+    "difficulty": 2,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M100,25 L165,80 L165,170 L35,170 L35,80 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 50, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 65, "y": 110, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 135, "y": 110, "rotation": 90, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 140, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 80, "y": 110, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "지붕이 있는 집 모양이에요" },
+      { "level": 2, "description": "큰 삼각형으로 지붕을 만드세요" },
+      { "level": 3, "description": "아래 사각형이 집 본체예요" }
+    ],
+    "reward": { "seeds": 2, "feed": 1 }
+  },
+  {
+    "id": 6,
+    "theme": "vehicle",
+    "name": "Boat",
+    "nameKo": "배",
+    "difficulty": 2,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M30,120 L100,30 L170,120 L160,160 L40,160 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 70, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 60, "y": 130, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 140, "y": 130, "rotation": 90, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 145, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "sm_tri_1", "sm_tri_2", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "물 위에 뜨는 배에요" },
+      { "level": 2, "description": "위쪽 삼각형이 돛대예요" },
+      { "level": 3, "description": "아래 평행사변형이 배 밑부분이에요" }
+    ],
+    "reward": { "seeds": 2, "feed": 1 }
+  },
+  {
+    "id": 7,
+    "theme": "nature",
+    "name": "Leaf",
+    "nameKo": "나뭇잎",
+    "difficulty": 1,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M100,20 L170,100 L100,180 L30,100 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 70, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 130, "rotation": 180, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 65, "y": 100, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 135, "y": 100, "rotation": 90, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "sm_tri_1", "sm_tri_2"],
+    "hints": [
+      { "level": 1, "description": "마름모 모양의 잎이에요" },
+      { "level": 2, "description": "큰 삼각형 두 개를 마주 보게 해요" },
+      { "level": 3, "description": "작은 삼각형들이 양쪽 끝을 채워요" }
+    ],
+    "reward": { "seeds": 2, "feed": 1 }
+  },
+  {
+    "id": 8,
+    "theme": "object",
+    "name": "Flag",
+    "nameKo": "깃발",
+    "difficulty": 2,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M40,20 L40,170 L50,170 L50,95 L160,55 L160,20 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "sm_tri_1", "x": 80, "y": 45, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 110, "y": 45, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 45, "y": 120, "rotation": 270, "flipped": false },
+      { "pieceId": "square", "x": 45, "y": 80, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "깃발 모양이에요" },
+      { "level": 2, "description": "왼쪽에 깃대가 있어요" },
+      { "level": 3, "description": "오른쪽 위 삼각형이 깃발이에요" }
+    ],
+    "reward": { "seeds": 2, "feed": 1 }
+  },
+  {
+    "id": 9,
+    "theme": "vehicle",
+    "name": "Rocket",
+    "nameKo": "로켓",
+    "difficulty": 2,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M100,15 L130,60 L130,150 L115,170 L85,170 L70,150 L70,60 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 45, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 80, "y": 110, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 120, "y": 110, "rotation": 90, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 150, "rotation": 0, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 110, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "하늘로 날아가는 로켓이에요" },
+      { "level": 2, "description": "뾰족한 꼭대기는 큰 삼각형이에요" },
+      { "level": 3, "description": "아래 날개는 작은 삼각형이에요" }
+    ],
+    "reward": { "seeds": 2, "feed": 1 }
+  },
+  {
+    "id": 10,
+    "theme": "object",
+    "name": "Star",
+    "nameKo": "별",
+    "difficulty": 2,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M100,20 L115,65 L160,65 L125,90 L138,135 L100,110 L62,135 L75,90 L40,65 L85,65 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 60, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 65, "y": 100, "rotation": 240, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 135, "y": 100, "rotation": 120, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 115, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "반짝이는 별 모양이에요" },
+      { "level": 2, "description": "가운데에 사각형을 놓아요" },
+      { "level": 3, "description": "삼각형들이 별의 꼭짓점을 만들어요" }
+    ],
+    "reward": { "seeds": 2, "feed": 1 }
+  },
+  {
+    "id": 11,
+    "theme": "animal",
+    "name": "Duck",
+    "nameKo": "오리",
+    "difficulty": 2,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M60,80 L80,50 L100,50 L120,65 L160,65 L160,100 L130,120 L80,120 L60,100 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 120, "y": 85, "rotation": 90, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 80, "y": 100, "rotation": 270, "flipped": false },
+      { "pieceId": "mid_tri", "x": 90, "y": 65, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 65, "y": 90, "rotation": 315, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 145, "y": 85, "rotation": 45, "flipped": false },
+      { "pieceId": "square", "x": 110, "y": 100, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 80, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "꽥꽥 우는 오리에요" },
+      { "level": 2, "description": "오른쪽에 부리가 있어요" },
+      { "level": 3, "description": "큰 삼각형이 몸통을 만들어요" }
+    ],
+    "reward": { "seeds": 3, "feed": 2 }
+  },
+  {
+    "id": 12,
+    "theme": "animal",
+    "name": "Fish",
+    "nameKo": "물고기",
+    "difficulty": 2,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M30,100 L65,70 L150,70 L170,100 L150,130 L65,130 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 120, "y": 100, "rotation": 90, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 90, "y": 100, "rotation": 270, "flipped": true },
+      { "pieceId": "mid_tri", "x": 155, "y": 100, "rotation": 90, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 55, "y": 85, "rotation": 315, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 55, "y": 115, "rotation": 45, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 130, "y": 100, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "꼬리가 있는 물고기에요" },
+      { "level": 2, "description": "왼쪽이 꼬리, 오른쪽이 머리예요" },
+      { "level": 3, "description": "작은 삼각형이 꼬리지느러미에요" }
+    ],
+    "reward": { "seeds": 3, "feed": 2 }
+  },
+  {
+    "id": 13,
+    "theme": "animal",
+    "name": "Bird",
+    "nameKo": "새",
+    "difficulty": 2,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M100,40 L150,80 L160,120 L130,150 L100,130 L70,150 L40,120 L50,80 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 70, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 120, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 95, "rotation": 90, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 65, "y": 115, "rotation": 225, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 135, "y": 115, "rotation": 135, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 135, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "날개를 펼친 새에요" },
+      { "level": 2, "description": "위쪽 큰 삼각형이 날개예요" },
+      { "level": 3, "description": "아래 작은 삼각형이 꼬리를 만들어요" }
+    ],
+    "reward": { "seeds": 3, "feed": 2 }
+  },
+  {
+    "id": 14,
+    "theme": "animal",
+    "name": "Cat",
+    "nameKo": "고양이",
+    "difficulty": 3,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M70,30 L85,55 L100,40 L115,55 L130,30 L145,80 L155,170 L45,170 L55,80 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 110, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 145, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 75, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 75, "y": 50, "rotation": 315, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 125, "y": 50, "rotation": 45, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 130, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 100, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "귀가 뾰족한 고양이에요" },
+      { "level": 2, "description": "작은 삼각형이 귀가 돼요" },
+      { "level": 3, "description": "큰 삼각형들이 몸통을 만들어요" }
+    ],
+    "reward": { "seeds": 3, "feed": 2 }
+  },
+  {
+    "id": 15,
+    "theme": "animal",
+    "name": "Dog",
+    "nameKo": "강아지",
+    "difficulty": 3,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M40,60 L70,40 L90,55 L130,45 L160,65 L165,100 L145,130 L155,170 L130,170 L120,140 L80,140 L70,170 L45,170 L55,130 L35,100 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 105, "y": 85, "rotation": 90, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 95, "y": 115, "rotation": 270, "flipped": false },
+      { "pieceId": "mid_tri", "x": 75, "y": 60, "rotation": 330, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 55, "y": 90, "rotation": 225, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 145, "y": 90, "rotation": 135, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 140, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "꼬리를 흔드는 강아지에요" },
+      { "level": 2, "description": "머리는 위쪽에 삼각형으로 만들어요" },
+      { "level": 3, "description": "아래 평행사변형이 다리예요" }
+    ],
+    "reward": { "seeds": 3, "feed": 2 }
+  },
+  {
+    "id": 16,
+    "theme": "animal",
+    "name": "Rabbit",
+    "nameKo": "토끼",
+    "difficulty": 3,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M80,20 L80,55 L60,80 L60,130 L140,130 L140,80 L120,55 L120,20 L110,20 L110,50 L90,50 L90,20 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 105, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 105, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 80, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 80, "y": 35, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 120, "y": 35, "rotation": 0, "flipped": true },
+      { "pieceId": "square", "x": 100, "y": 105, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 115, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "귀가 긴 토끼에요" },
+      { "level": 2, "description": "위쪽 긴 삼각형이 귀예요" },
+      { "level": 3, "description": "큰 삼각형들이 몸통을 이뤄요" }
+    ],
+    "reward": { "seeds": 3, "feed": 2 }
+  },
+  {
+    "id": 17,
+    "theme": "animal",
+    "name": "Swan",
+    "nameKo": "백조",
+    "difficulty": 3,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M100,30 L125,60 L135,100 L160,130 L130,150 L100,140 L70,150 L40,130 L65,100 L75,60 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 115, "y": 80, "rotation": 45, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 85, "y": 80, "rotation": 315, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 50, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 60, "y": 120, "rotation": 225, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 140, "y": 120, "rotation": 135, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 115, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 135, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "우아한 백조에요" },
+      { "level": 2, "description": "위쪽이 목과 머리예요" },
+      { "level": 3, "description": "큰 삼각형들이 날개를 펼쳐요" }
+    ],
+    "reward": { "seeds": 3, "feed": 2 }
+  },
+  {
+    "id": 18,
+    "theme": "animal",
+    "name": "Turtle",
+    "nameKo": "거북이",
+    "difficulty": 3,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M100,50 L145,70 L165,110 L145,150 L100,165 L55,150 L35,110 L55,70 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 130, "y": 90, "rotation": 60, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 70, "y": 130, "rotation": 240, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 108, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 75, "y": 75, "rotation": 315, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 125, "y": 135, "rotation": 135, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 108, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 120, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "느릿느릿 거북이에요" },
+      { "level": 2, "description": "등딱지는 팔각형에 가까워요" },
+      { "level": 3, "description": "가운데 사각형이 등딱지 중앙이에요" }
+    ],
+    "reward": { "seeds": 3, "feed": 2 }
+  },
+  {
+    "id": 19,
+    "theme": "animal",
+    "name": "Fox",
+    "nameKo": "여우",
+    "difficulty": 3,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M100,25 L140,70 L170,50 L155,100 L150,170 L50,170 L45,100 L30,50 L60,70 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 100, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 140, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 60, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 65, "y": 55, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 135, "y": 55, "rotation": 90, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 120, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 150, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "뾰족한 귀의 여우에요" },
+      { "level": 2, "description": "위쪽 삼각형들이 귀예요" },
+      { "level": 3, "description": "몸통은 아래 큰 삼각형으로 만들어요" }
+    ],
+    "reward": { "seeds": 3, "feed": 2 }
+  },
+  {
+    "id": 20,
+    "theme": "animal",
+    "name": "Penguin",
+    "nameKo": "펭귄",
+    "difficulty": 3,
+    "gradeGroup": "low",
+    "targetShape": {
+      "outline": "M100,30 L125,55 L130,110 L120,170 L80,170 L70,110 L75,55 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 115, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 145, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 80, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 80, "y": 55, "rotation": 330, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 120, "y": 55, "rotation": 30, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 115, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 135, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "뒤뚱뒤뚱 펭귄이에요" },
+      { "level": 2, "description": "위쪽에 머리를 만들어요" },
+      { "level": 3, "description": "아래 큰 삼각형들이 몸통이에요" }
+    ],
+    "reward": { "seeds": 3, "feed": 2 }
+  },
+  {
+    "id": 21,
+    "theme": "vehicle",
+    "name": "Airplane",
+    "nameKo": "비행기",
+    "difficulty": 3,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M100,30 L120,80 L175,100 L120,115 L130,165 L100,145 L70,165 L80,115 L25,100 L80,80 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 75, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 125, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 140, "y": 100, "rotation": 90, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 60, "y": 100, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 100, "y": 50, "rotation": 0, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 140, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "하늘을 나는 비행기에요" },
+      { "level": 2, "description": "양쪽으로 날개가 넓게 펼쳐져요" },
+      { "level": 3, "description": "가운데 사각형이 기체 중심이에요" }
+    ],
+    "reward": { "seeds": 4, "feed": 2 }
+  },
+  {
+    "id": 22,
+    "theme": "vehicle",
+    "name": "Car",
+    "nameKo": "자동차",
+    "difficulty": 3,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M40,110 L60,75 L140,75 L160,110 L160,150 L40,150 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 75, "y": 90, "rotation": 270, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 125, "y": 90, "rotation": 90, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 80, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 55, "y": 125, "rotation": 315, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 145, "y": 125, "rotation": 225, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 130, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 110, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "달리는 자동차에요" },
+      { "level": 2, "description": "위쪽이 차량 지붕이에요" },
+      { "level": 3, "description": "아래 직사각형이 차체예요" }
+    ],
+    "reward": { "seeds": 4, "feed": 2 }
+  },
+  {
+    "id": 23,
+    "theme": "nature",
+    "name": "Sun",
+    "nameKo": "태양",
+    "difficulty": 3,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M100,15 L110,60 L155,40 L130,80 L175,90 L135,110 L160,145 L115,130 L110,175 L100,135 L90,175 L85,130 L40,145 L65,110 L25,90 L70,80 L45,40 L90,60 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 70, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 130, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 140, "y": 100, "rotation": 90, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 60, "y": 100, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 130, "y": 65, "rotation": 45, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 75, "y": 130, "rotation": 315, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "빛나는 태양이에요" },
+      { "level": 2, "description": "가운데를 중심으로 빛이 퍼져요" },
+      { "level": 3, "description": "삼각형들이 햇살을 표현해요" }
+    ],
+    "reward": { "seeds": 4, "feed": 2 }
+  },
+  {
+    "id": 24,
+    "theme": "object",
+    "name": "Bridge",
+    "nameKo": "다리",
+    "difficulty": 3,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M20,150 L20,110 L60,70 L140,70 L180,110 L180,150 L160,150 L160,110 L140,90 L60,90 L40,110 L40,150 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 130, "y": 100, "rotation": 135, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 70, "y": 100, "rotation": 225, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 80, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 45, "y": 130, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 155, "y": 130, "rotation": 90, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 130, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 110, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "강을 건너는 다리에요" },
+      { "level": 2, "description": "위쪽 아치형이 다리 구조예요" },
+      { "level": 3, "description": "큰 삼각형들이 경사면을 이뤄요" }
+    ],
+    "reward": { "seeds": 4, "feed": 2 }
+  },
+  {
+    "id": 25,
+    "theme": "object",
+    "name": "Candle",
+    "nameKo": "촛불",
+    "difficulty": 3,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M100,20 L110,50 L120,60 L120,160 L80,160 L80,60 L90,50 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 110, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 140, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 55, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 85, "y": 80, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 115, "y": 80, "rotation": 90, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 115, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 100, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "빛을 밝히는 촛불이에요" },
+      { "level": 2, "description": "위쪽 작은 삼각형이 불꽃이에요" },
+      { "level": 3, "description": "아래 직사각형이 초 몸체예요" }
+    ],
+    "reward": { "seeds": 4, "feed": 2 }
+  },
+  {
+    "id": 26,
+    "theme": "nature",
+    "name": "Cactus",
+    "nameKo": "선인장",
+    "difficulty": 3,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M90,20 L110,20 L110,70 L140,70 L140,110 L110,110 L110,170 L90,170 L90,110 L60,110 L60,70 L90,70 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 100, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 140, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 60, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 75, "y": 90, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 125, "y": 90, "rotation": 90, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 120, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "사막의 선인장이에요" },
+      { "level": 2, "description": "양쪽으로 팔이 뻗어 있어요" },
+      { "level": 3, "description": "가운데 세로 줄기를 먼저 만들어요" }
+    ],
+    "reward": { "seeds": 4, "feed": 2 }
+  },
+  {
+    "id": 27,
+    "theme": "object",
+    "name": "Anchor",
+    "nameKo": "닻",
+    "difficulty": 3,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M100,20 L115,40 L115,60 L150,100 L165,130 L140,155 L110,140 L110,165 L90,165 L90,140 L60,155 L35,130 L50,100 L85,60 L85,40 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 105, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 135, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 55, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 62, "y": 140, "rotation": 225, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 138, "y": 140, "rotation": 135, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 120, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 90, "rotation": 90, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "배를 고정하는 닻이에요" },
+      { "level": 2, "description": "위쪽 원이 고리예요" },
+      { "level": 3, "description": "아래 양쪽 곡선이 닻의 날이에요" }
+    ],
+    "reward": { "seeds": 4, "feed": 2 }
+  },
+  {
+    "id": 28,
+    "theme": "vehicle",
+    "name": "Ship",
+    "nameKo": "범선",
+    "difficulty": 3,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M100,20 L100,110 L160,130 L170,160 L30,160 L40,130 L100,110 M85,110 L50,70 M115,110 L150,70",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 75, "y": 75, "rotation": 315, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 125, "y": 75, "rotation": 45, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 55, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 65, "y": 130, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 135, "y": 130, "rotation": 90, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 135, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 150, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "돛을 올린 범선이에요" },
+      { "level": 2, "description": "위쪽 삼각형들이 돛이에요" },
+      { "level": 3, "description": "아래 사다리꼴이 선체예요" }
+    ],
+    "reward": { "seeds": 4, "feed": 2 }
+  },
+  {
+    "id": 29,
+    "theme": "nature",
+    "name": "Flower",
+    "nameKo": "꽃",
+    "difficulty": 3,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M100,30 L115,65 L155,55 L130,85 L165,100 L130,115 L155,145 L115,135 L100,170 L85,135 L45,145 L70,115 L35,100 L70,85 L45,55 L85,65 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 70, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 130, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 140, "y": 100, "rotation": 90, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 60, "y": 100, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 130, "y": 70, "rotation": 45, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 70, "y": 130, "rotation": 315, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "활짝 핀 꽃이에요" },
+      { "level": 2, "description": "가운데 사각형이 꽃 중심이에요" },
+      { "level": 3, "description": "삼각형들이 꽃잎을 이뤄요" }
+    ],
+    "reward": { "seeds": 4, "feed": 2 }
+  },
+  {
+    "id": 30,
+    "theme": "object",
+    "name": "Hourglass",
+    "nameKo": "모래시계",
+    "difficulty": 3,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M40,20 L160,20 L110,100 L160,180 L40,180 L90,100 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 65, "rotation": 180, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 135, "rotation": 0, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 100, "rotation": 90, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 60, "y": 35, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 140, "y": 35, "rotation": 0, "flipped": true },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 60, "y": 155, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "시간을 재는 모래시계에요" },
+      { "level": 2, "description": "위아래 삼각형이 마주보고 있어요" },
+      { "level": 3, "description": "가운데가 좁은 허리 부분이에요" }
+    ],
+    "reward": { "seeds": 4, "feed": 2 }
+  },
+  {
+    "id": 31,
+    "theme": "object",
+    "name": "Crown",
+    "nameKo": "왕관",
+    "difficulty": 4,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M20,160 L20,80 L55,120 L80,50 L100,90 L120,50 L145,120 L180,80 L180,160 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 80, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 135, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 145, "y": 100, "rotation": 30, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 55, "y": 100, "rotation": 330, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 130, "y": 70, "rotation": 60, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 130, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 70, "y": 120, "rotation": 315, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "왕이 쓰는 왕관이에요" },
+      { "level": 2, "description": "위쪽 뾰족한 세 부분이 왕관 꼭대기에요" },
+      { "level": 3, "description": "아래 사각형이 왕관 테두리예요" }
+    ],
+    "reward": { "seeds": 5, "feed": 3 }
+  },
+  {
+    "id": 32,
+    "theme": "animal",
+    "name": "Horse",
+    "nameKo": "말",
+    "difficulty": 4,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M120,25 L150,50 L155,80 L145,100 L165,140 L145,170 L130,150 L100,165 L70,150 L55,170 L35,140 L55,100 L45,80 L50,50 L80,25 L100,45 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 115, "y": 70, "rotation": 30, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 130, "rotation": 200, "flipped": false },
+      { "pieceId": "mid_tri", "x": 85, "y": 65, "rotation": 150, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 60, "y": 110, "rotation": 260, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 140, "y": 110, "rotation": 100, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 110, "rotation": 20, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 148, "rotation": 10, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "달리는 말이에요" },
+      { "level": 2, "description": "머리는 위쪽 오른편이에요" },
+      { "level": 3, "description": "다리 네 개를 표현해 보세요" }
+    ],
+    "reward": { "seeds": 5, "feed": 3 }
+  },
+  {
+    "id": 33,
+    "theme": "nature",
+    "name": "Butterfly",
+    "nameKo": "나비",
+    "difficulty": 4,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M100,80 L80,30 L30,50 L60,100 L30,150 L80,170 L100,120 L120,170 L170,150 L140,100 L170,50 L120,30 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 65, "y": 70, "rotation": 315, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 135, "y": 70, "rotation": 45, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 100, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 60, "y": 135, "rotation": 225, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 140, "y": 135, "rotation": 135, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 110, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "날개를 펼친 나비에요" },
+      { "level": 2, "description": "좌우 대칭 날개를 만들어요" },
+      { "level": 3, "description": "큰 삼각형들이 날개예요" }
+    ],
+    "reward": { "seeds": 5, "feed": 3 }
+  },
+  {
+    "id": 34,
+    "theme": "vehicle",
+    "name": "Helicopter",
+    "nameKo": "헬리콥터",
+    "difficulty": 4,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M20,90 L80,90 L80,70 L120,70 L120,90 L180,90 L180,110 L140,110 L140,150 L120,160 L80,160 L60,150 L60,110 L20,110 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 130, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 150, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 100, "rotation": 180, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 40, "y": 100, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 160, "y": 100, "rotation": 90, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 110, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 80, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "하늘을 나는 헬리콥터에요" },
+      { "level": 2, "description": "위쪽이 프로펠러예요" },
+      { "level": 3, "description": "옆으로 긴 몸통을 만들어요" }
+    ],
+    "reward": { "seeds": 5, "feed": 3 }
+  },
+  {
+    "id": 35,
+    "theme": "object",
+    "name": "Diamond",
+    "nameKo": "다이아몬드",
+    "difficulty": 4,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M100,20 L165,70 L140,150 L100,170 L60,150 L35,70 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 65, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 135, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 150, "y": 100, "rotation": 90, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 50, "y": 100, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 130, "y": 60, "rotation": 45, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 70, "y": 130, "rotation": 315, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "반짝이는 다이아몬드에요" },
+      { "level": 2, "description": "위아래가 뾰족한 육각형이에요" },
+      { "level": 3, "description": "큰 삼각형들이 위아래를 맡아요" }
+    ],
+    "reward": { "seeds": 5, "feed": 3 }
+  },
+  {
+    "id": 36,
+    "theme": "object",
+    "name": "Lamp",
+    "nameKo": "램프",
+    "difficulty": 4,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M100,20 L130,70 L115,70 L120,120 L150,120 L150,140 L50,140 L50,120 L80,120 L85,70 L70,70 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 60, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 130, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 95, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 75, "y": 95, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 125, "y": 95, "rotation": 90, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 125, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 105, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "빛을 내는 램프에요" },
+      { "level": 2, "description": "위쪽 삼각형이 갓 모양이에요" },
+      { "level": 3, "description": "아래 직사각형이 받침대예요" }
+    ],
+    "reward": { "seeds": 5, "feed": 3 }
+  },
+  {
+    "id": 37,
+    "theme": "animal",
+    "name": "Elephant",
+    "nameKo": "코끼리",
+    "difficulty": 4,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M60,40 L100,40 L130,30 L160,55 L165,90 L150,110 L155,170 L130,170 L125,130 L95,130 L90,170 L65,170 L70,110 L50,90 L45,55 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 115, "y": 70, "rotation": 45, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 95, "y": 120, "rotation": 200, "flipped": false },
+      { "pieceId": "mid_tri", "x": 75, "y": 55, "rotation": 300, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 60, "y": 100, "rotation": 240, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 148, "y": 85, "rotation": 120, "flipped": false },
+      { "pieceId": "square", "x": 108, "y": 100, "rotation": 15, "flipped": false },
+      { "pieceId": "parallelogram", "x": 110, "y": 140, "rotation": 5, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "코가 긴 코끼리에요" },
+      { "level": 2, "description": "오른쪽에 긴 코가 있어요" },
+      { "level": 3, "description": "큰 몸통에 짧은 다리 네 개를 표현해요" }
+    ],
+    "reward": { "seeds": 5, "feed": 3 }
+  },
+  {
+    "id": 38,
+    "theme": "nature",
+    "name": "Snowflake",
+    "nameKo": "눈송이",
+    "difficulty": 4,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M100,20 L108,50 L130,28 L120,55 L150,45 L128,68 L160,70 L130,85 L155,105 L125,100 L140,130 L112,115 L110,150 L100,120 L90,150 L88,115 L60,130 L75,100 L45,105 L70,85 L40,70 L72,68 L50,45 L80,55 L70,28 L92,50 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 65, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 135, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 140, "y": 100, "rotation": 90, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 60, "y": 100, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 130, "y": 65, "rotation": 30, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 70, "y": 135, "rotation": 330, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "겨울 눈송이에요" },
+      { "level": 2, "description": "여섯 방향으로 뻗어 있어요" },
+      { "level": 3, "description": "회전 대칭 형태예요" }
+    ],
+    "reward": { "seeds": 5, "feed": 3 }
+  },
+  {
+    "id": 39,
+    "theme": "object",
+    "name": "Chess Knight",
+    "nameKo": "체스 나이트",
+    "difficulty": 4,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M70,170 L70,130 L50,110 L50,60 L75,30 L110,25 L140,40 L145,70 L130,90 L150,110 L130,130 L130,170 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 75, "rotation": 15, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 135, "rotation": 185, "flipped": false },
+      { "pieceId": "mid_tri", "x": 115, "y": 55, "rotation": 60, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 65, "y": 90, "rotation": 250, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 138, "y": 105, "rotation": 120, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 120, "rotation": 5, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 148, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "체스판의 나이트(말) 기물이에요" },
+      { "level": 2, "description": "위쪽은 말 머리 모양이에요" },
+      { "level": 3, "description": "아래 직사각형이 기물 받침이에요" }
+    ],
+    "reward": { "seeds": 5, "feed": 3 }
+  },
+  {
+    "id": 40,
+    "theme": "vehicle",
+    "name": "Space Shuttle",
+    "nameKo": "우주왕복선",
+    "difficulty": 4,
+    "gradeGroup": "high",
+    "targetShape": {
+      "outline": "M100,15 L120,55 L140,55 L160,90 L160,150 L130,170 L100,160 L70,170 L40,150 L40,90 L60,55 L80,55 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 55, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 135, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 95, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 60, "y": 80, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 140, "y": 80, "rotation": 90, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 120, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 145, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "우주로 날아가는 왕복선이에요" },
+      { "level": 2, "description": "위쪽이 뾰족한 기수 부분이에요" },
+      { "level": 3, "description": "옆 날개는 작은 삼각형이에요" }
+    ],
+    "reward": { "seeds": 5, "feed": 3 }
+  },
+  {
+    "id": 41,
+    "theme": "animal",
+    "name": "Dragon",
+    "nameKo": "용",
+    "difficulty": 5,
+    "gradeGroup": "both",
+    "targetShape": {
+      "outline": "M160,30 L175,60 L150,75 L170,100 L145,115 L155,145 L130,160 L100,150 L80,170 L55,155 L40,130 L60,110 L35,85 L60,75 L45,45 L75,60 L80,35 L100,55 L120,30 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 110, "y": 65, "rotation": 40, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 85, "y": 125, "rotation": 210, "flipped": false },
+      { "pieceId": "mid_tri", "x": 150, "y": 85, "rotation": 75, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 55, "y": 80, "rotation": 290, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 140, "y": 130, "rotation": 155, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 25, "flipped": false },
+      { "pieceId": "parallelogram", "x": 70, "y": 148, "rotation": 340, "flipped": true }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "전설의 동물 용이에요" },
+      { "level": 2, "description": "꼬리와 날개를 표현해요" },
+      { "level": 3, "description": "머리는 오른쪽 위에 위치해요" }
+    ],
+    "reward": { "seeds": 8, "feed": 5, "special": "golden_egg" }
+  },
+  {
+    "id": 42,
+    "theme": "object",
+    "name": "Mandala",
+    "nameKo": "만다라",
+    "difficulty": 5,
+    "gradeGroup": "both",
+    "targetShape": {
+      "outline": "M100,20 L114,54 L150,40 L136,74 L170,80 L145,104 L162,136 L128,132 L120,168 L100,140 L80,168 L72,132 L38,136 L55,104 L30,80 L64,74 L50,40 L86,54 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 65, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 135, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 145, "y": 100, "rotation": 90, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 55, "y": 100, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 133, "y": 67, "rotation": 45, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 22.5, "flipped": false },
+      { "pieceId": "parallelogram", "x": 67, "y": 133, "rotation": 315, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "원형 패턴의 만다라에요" },
+      { "level": 2, "description": "8개 방향으로 대칭이에요" },
+      { "level": 3, "description": "가운데 사각형을 기준으로 배치해요" }
+    ],
+    "reward": { "seeds": 8, "feed": 5, "special": "rainbow_seed" }
+  },
+  {
+    "id": 43,
+    "theme": "animal",
+    "name": "Phoenix",
+    "nameKo": "불사조",
+    "difficulty": 5,
+    "gradeGroup": "both",
+    "targetShape": {
+      "outline": "M100,20 L125,55 L155,35 L140,70 L175,65 L150,95 L170,120 L135,115 L140,150 L110,135 L105,170 L100,140 L95,170 L90,135 L60,150 L65,115 L30,120 L50,95 L25,65 L60,70 L45,35 L75,55 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 65, "y": 75, "rotation": 315, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 135, "y": 75, "rotation": 45, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 55, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 55, "y": 115, "rotation": 225, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 145, "y": 115, "rotation": 135, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 45, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 135, "rotation": 270, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "불꽃 속에서 태어나는 불사조에요" },
+      { "level": 2, "description": "날개가 크게 펼쳐져 있어요" },
+      { "level": 3, "description": "꼬리 깃털을 아래쪽에 표현해요" }
+    ],
+    "reward": { "seeds": 8, "feed": 5, "special": "fire_crystal" }
+  },
+  {
+    "id": 44,
+    "theme": "object",
+    "name": "Lighthouse",
+    "nameKo": "등대",
+    "difficulty": 5,
+    "gradeGroup": "both",
+    "targetShape": {
+      "outline": "M100,15 L115,55 L115,160 L140,175 L60,175 L85,160 L85,55 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 120, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 150, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 50, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 88, "y": 80, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 112, "y": 80, "rotation": 90, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 125, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 100, "rotation": 90, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "바다의 등대에요" },
+      { "level": 2, "description": "위쪽 뾰족한 부분이 등대 꼭대기에요" },
+      { "level": 3, "description": "아래로 갈수록 넓어지는 구조예요" }
+    ],
+    "reward": { "seeds": 8, "feed": 5 }
+  },
+  {
+    "id": 45,
+    "theme": "nature",
+    "name": "Whale",
+    "nameKo": "고래",
+    "difficulty": 5,
+    "gradeGroup": "both",
+    "targetShape": {
+      "outline": "M25,100 L60,65 L130,55 L175,80 L180,105 L155,130 L130,135 L100,120 L70,140 L40,130 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 125, "y": 85, "rotation": 100, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 80, "y": 105, "rotation": 280, "flipped": false },
+      { "pieceId": "mid_tri", "x": 158, "y": 100, "rotation": 80, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 45, "y": 105, "rotation": 220, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 55, "y": 80, "rotation": 340, "flipped": false },
+      { "pieceId": "square", "x": 108, "y": 100, "rotation": 10, "flipped": false },
+      { "pieceId": "parallelogram", "x": 95, "y": 120, "rotation": 350, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "바다의 거대한 고래에요" },
+      { "level": 2, "description": "왼쪽이 꼬리, 오른쪽이 머리예요" },
+      { "level": 3, "description": "아래 꼬리지느러미를 표현해요" }
+    ],
+    "reward": { "seeds": 8, "feed": 5, "special": "ocean_pearl" }
+  },
+  {
+    "id": 46,
+    "theme": "vehicle",
+    "name": "Hot Air Balloon",
+    "nameKo": "열기구",
+    "difficulty": 5,
+    "gradeGroup": "both",
+    "targetShape": {
+      "outline": "M100,20 L145,45 L160,90 L150,135 L125,155 L115,170 L85,170 L75,155 L50,135 L40,90 L55,45 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 75, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 125, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 145, "y": 90, "rotation": 60, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 55, "y": 90, "rotation": 300, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 130, "y": 135, "rotation": 150, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 100, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 150, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "하늘을 나는 열기구에요" },
+      { "level": 2, "description": "둥근 풍선 부분을 만들어요" },
+      { "level": 3, "description": "아래 바구니를 작게 표현해요" }
+    ],
+    "reward": { "seeds": 8, "feed": 5, "special": "cloud_token" }
+  },
+  {
+    "id": 47,
+    "theme": "object",
+    "name": "Treasure Chest",
+    "nameKo": "보물상자",
+    "difficulty": 5,
+    "gradeGroup": "both",
+    "targetShape": {
+      "outline": "M30,100 L30,170 L170,170 L170,100 L130,60 L70,60 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 80, "y": 80, "rotation": 315, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 120, "y": 80, "rotation": 45, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 68, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 55, "y": 130, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 145, "y": 130, "rotation": 90, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 140, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 115, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "보물이 가득한 상자에요" },
+      { "level": 2, "description": "위쪽 반원형이 뚜껑이에요" },
+      { "level": 3, "description": "아래 직사각형이 상자 본체예요" }
+    ],
+    "reward": { "seeds": 8, "feed": 5, "special": "rare_gem" }
+  },
+  {
+    "id": 48,
+    "theme": "nature",
+    "name": "Volcano",
+    "nameKo": "화산",
+    "difficulty": 5,
+    "gradeGroup": "both",
+    "targetShape": {
+      "outline": "M100,20 L115,50 L125,45 L130,60 L155,120 L170,170 L30,170 L45,120 L70,60 L75,45 L85,50 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 95, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 145, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 50, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 65, "y": 70, "rotation": 330, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 135, "y": 70, "rotation": 30, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 130, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 110, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "용암이 분출하는 화산이에요" },
+      { "level": 2, "description": "위쪽 작은 삼각형이 분화구에요" },
+      { "level": 3, "description": "넓게 퍼지는 아랫부분을 만들어요" }
+    ],
+    "reward": { "seeds": 8, "feed": 5, "special": "lava_gem" }
+  },
+  {
+    "id": 49,
+    "theme": "object",
+    "name": "Castle",
+    "nameKo": "성",
+    "difficulty": 5,
+    "gradeGroup": "both",
+    "targetShape": {
+      "outline": "M30,170 L30,120 L50,120 L50,140 L60,140 L60,120 L80,100 L80,50 L90,50 L90,35 L100,20 L110,35 L110,50 L120,50 L120,100 L140,120 L140,140 L150,140 L150,120 L170,120 L170,170 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 100, "y": 80, "rotation": 0, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 100, "y": 140, "rotation": 180, "flipped": false },
+      { "pieceId": "mid_tri", "x": 100, "y": 45, "rotation": 0, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 65, "y": 120, "rotation": 270, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 135, "y": 120, "rotation": 90, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 120, "rotation": 0, "flipped": false },
+      { "pieceId": "parallelogram", "x": 100, "y": 100, "rotation": 0, "flipped": false }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "왕이 사는 성이에요" },
+      { "level": 2, "description": "가운데 탑이 가장 높아요" },
+      { "level": 3, "description": "좌우 성벽을 균형있게 만들어요" }
+    ],
+    "reward": { "seeds": 8, "feed": 5, "special": "castle_key" }
+  },
+  {
+    "id": 50,
+    "theme": "animal",
+    "name": "Unicorn",
+    "nameKo": "유니콘",
+    "difficulty": 5,
+    "gradeGroup": "both",
+    "targetShape": {
+      "outline": "M125,20 L135,50 L155,45 L145,70 L170,80 L150,100 L160,130 L130,120 L120,150 L100,135 L80,160 L65,140 L40,150 L50,120 L30,105 L55,90 L45,60 L75,70 L85,40 L100,60 Z",
+      "viewBox": "0 0 200 200"
+    },
+    "solution": [
+      { "pieceId": "big_tri_1", "x": 110, "y": 75, "rotation": 35, "flipped": false },
+      { "pieceId": "big_tri_2", "x": 80, "y": 120, "rotation": 215, "flipped": false },
+      { "pieceId": "mid_tri", "x": 140, "y": 55, "rotation": 70, "flipped": false },
+      { "pieceId": "sm_tri_1", "x": 55, "y": 95, "rotation": 260, "flipped": false },
+      { "pieceId": "sm_tri_2", "x": 145, "y": 110, "rotation": 145, "flipped": false },
+      { "pieceId": "square", "x": 100, "y": 105, "rotation": 20, "flipped": false },
+      { "pieceId": "parallelogram", "x": 80, "y": 145, "rotation": 330, "flipped": true }
+    ],
+    "allowedPieces": ["big_tri_1", "big_tri_2", "mid_tri", "sm_tri_1", "sm_tri_2", "square", "parallelogram"],
+    "hints": [
+      { "level": 1, "description": "뿔이 있는 유니콘이에요" },
+      { "level": 2, "description": "오른쪽 위의 뾰족한 부분이 뿔이에요" },
+      { "level": 3, "description": "말처럼 생긴 몸통을 만들어요" }
+    ],
+    "reward": { "seeds": 8, "feed": 5, "special": "unicorn_horn" }
+  }
+]

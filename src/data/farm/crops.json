@@ -1,0 +1,44 @@
+{
+  "crops": [
+    {
+      "species": "wheat",
+      "nameKo": "밀",
+      "unlockCondition": { "type": "puzzle_count", "count": 1 },
+      "stages": ["seed", "sprout", "growing", "ready"],
+      "stageNames": ["씨앗", "새싹", "자라는 중", "수확 준비"],
+      "seedCost": 1,
+      "growthSteps": 4,
+      "harvestReward": { "seeds": 3, "feed": 0, "coins": 5 }
+    },
+    {
+      "species": "corn",
+      "nameKo": "옥수수",
+      "unlockCondition": { "type": "puzzle_count", "count": 8 },
+      "stages": ["seed", "sprout", "growing", "ready"],
+      "stageNames": ["씨앗", "새싹", "자라는 중", "수확 준비"],
+      "seedCost": 2,
+      "growthSteps": 4,
+      "harvestReward": { "seeds": 4, "feed": 2, "coins": 8 }
+    },
+    {
+      "species": "carrot",
+      "nameKo": "당근",
+      "unlockCondition": { "type": "puzzle_count", "count": 20 },
+      "stages": ["seed", "sprout", "growing", "ready"],
+      "stageNames": ["씨앗", "새싹", "자라는 중", "수확 준비"],
+      "seedCost": 3,
+      "growthSteps": 4,
+      "harvestReward": { "seeds": 5, "feed": 3, "coins": 10 }
+    },
+    {
+      "species": "potato",
+      "nameKo": "감자",
+      "unlockCondition": { "type": "puzzle_count", "count": 35 },
+      "stages": ["seed", "sprout", "growing", "ready"],
+      "stageNames": ["씨앗", "새싹", "자라는 중", "수확 준비"],
+      "seedCost": 4,
+      "growthSteps": 4,
+      "harvestReward": { "seeds": 6, "feed": 4, "coins": 12 }
+    }
+  ]
+}

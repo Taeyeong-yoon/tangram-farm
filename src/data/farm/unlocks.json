@@ -1,0 +1,21 @@
+{
+  "animals": {
+    "chicken": { "type": "puzzle_count", "count": 1 },
+    "goat": { "type": "puzzle_count", "count": 10 },
+    "pig": { "type": "puzzle_count", "count": 25 },
+    "cow": { "type": "theme_clear", "theme": "animal" },
+    "horse": { "type": "puzzle_count", "count": 50 }
+  },
+  "crops": {
+    "wheat": { "type": "puzzle_count", "count": 1 },
+    "corn": { "type": "puzzle_count", "count": 8 },
+    "carrot": { "type": "puzzle_count", "count": 20 },
+    "potato": { "type": "puzzle_count", "count": 35 }
+  },
+  "farmExpansion": {
+    "level2": { "type": "puzzle_count", "count": 15 },
+    "level3": { "type": "puzzle_count", "count": 35 },
+    "level4": { "type": "puzzle_count", "count": 60 },
+    "level5": { "type": "puzzle_count", "count": 100 }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "rules": [
+    { "levelDifficulty": 1, "hintsUsed": 0, "baseReward": { "seeds": 2, "feed": 2, "coins": 5 } },
+    { "levelDifficulty": 1, "hintsUsed": 1, "baseReward": { "seeds": 2, "feed": 1, "coins": 3 } },
+    { "levelDifficulty": 1, "hintsUsed": 2, "baseReward": { "seeds": 1, "feed": 1, "coins": 2 } },
+    { "levelDifficulty": 1, "hintsUsed": 3, "baseReward": { "seeds": 1, "feed": 0, "coins": 1 } },
+    { "levelDifficulty": 2, "hintsUsed": 0, "baseReward": { "seeds": 3, "feed": 3, "coins": 8 } },
+    { "levelDifficulty": 2, "hintsUsed": 1, "baseReward": { "seeds": 2, "feed": 2, "coins": 6 } },
+    { "levelDifficulty": 2, "hintsUsed": 2, "baseReward": { "seeds": 2, "feed": 1, "coins": 4 } },
+    { "levelDifficulty": 2, "hintsUsed": 3, "baseReward": { "seeds": 1, "feed": 1, "coins": 3 } },
+    { "levelDifficulty": 3, "hintsUsed": 0, "baseReward": { "seeds": 4, "feed": 4, "coins": 10 } },
+    { "levelDifficulty": 3, "hintsUsed": 1, "baseReward": { "seeds": 3, "feed": 3, "coins": 8 } },
+    { "levelDifficulty": 3, "hintsUsed": 2, "baseReward": { "seeds": 2, "feed": 2, "coins": 6 } },
+    { "levelDifficulty": 3, "hintsUsed": 3, "baseReward": { "seeds": 2, "feed": 1, "coins": 4 } },
+    { "levelDifficulty": 4, "hintsUsed": 0, "baseReward": { "seeds": 5, "feed": 5, "coins": 13 } },
+    { "levelDifficulty": 4, "hintsUsed": 1, "baseReward": { "seeds": 4, "feed": 4, "coins": 10 } },
+    { "levelDifficulty": 4, "hintsUsed": 2, "baseReward": { "seeds": 3, "feed": 3, "coins": 8 } },
+    { "levelDifficulty": 4, "hintsUsed": 3, "baseReward": { "seeds": 2, "feed": 2, "coins": 6 } },
+    { "levelDifficulty": 5, "hintsUsed": 0, "baseReward": { "seeds": 6, "feed": 6, "coins": 16, "specialItem": "golden-barn-ribbon" } },
+    { "levelDifficulty": 5, "hintsUsed": 1, "baseReward": { "seeds": 5, "feed": 5, "coins": 13 } },
+    { "levelDifficulty": 5, "hintsUsed": 2, "baseReward": { "seeds": 4, "feed": 4, "coins": 10 } },
+    { "levelDifficulty": 5, "hintsUsed": 3, "baseReward": { "seeds": 3, "feed": 3, "coins": 8 } }
+  ]
+}

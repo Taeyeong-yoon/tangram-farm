@@ -1,0 +1,59 @@
+{
+  "animals": [
+    {
+      "species": "chicken",
+      "nameKo": "닭",
+      "unlockCondition": { "type": "puzzle_count", "count": 1 },
+      "stages": ["egg", "baby", "young", "adult"],
+      "stageNames": ["알", "병아리", "어린 닭", "다 큰 닭"],
+      "feedPerStage": [3, 8, 15],
+      "canBreed": true,
+      "breedCost": 10,
+      "maxCount": 5
+    },
+    {
+      "species": "goat",
+      "nameKo": "염소",
+      "unlockCondition": { "type": "puzzle_count", "count": 10 },
+      "stages": ["baby", "young", "adult"],
+      "stageNames": ["아기 염소", "어린 염소", "염소"],
+      "feedPerStage": [10, 20],
+      "canBreed": true,
+      "breedCost": 14,
+      "maxCount": 4
+    },
+    {
+      "species": "pig",
+      "nameKo": "돼지",
+      "unlockCondition": { "type": "puzzle_count", "count": 25 },
+      "stages": ["baby", "young", "adult"],
+      "stageNames": ["아기 돼지", "어린 돼지", "돼지"],
+      "feedPerStage": [12, 25],
+      "canBreed": true,
+      "breedCost": 18,
+      "maxCount": 4
+    },
+    {
+      "species": "cow",
+      "nameKo": "소",
+      "unlockCondition": { "type": "theme_clear", "theme": "animal" },
+      "stages": ["baby", "young", "adult"],
+      "stageNames": ["송아지", "어린 소", "소"],
+      "feedPerStage": [20, 40],
+      "canBreed": true,
+      "breedCost": 24,
+      "maxCount": 3
+    },
+    {
+      "species": "horse",
+      "nameKo": "말",
+      "unlockCondition": { "type": "puzzle_count", "count": 50 },
+      "stages": ["baby", "young", "adult"],
+      "stageNames": ["망아지", "어린 말", "말"],
+      "feedPerStage": [30, 60],
+      "canBreed": false,
+      "breedCost": 0,
+      "maxCount": 2
+    }
+  ]
+}

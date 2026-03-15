@@ -1,0 +1,13 @@
+{
+  "name": "칠교 농장 - 탱그램 학습",
+  "short_name": "칠교 농장",
+  "description": "초등학생을 위한 칠교(탱그램) 퍼즐 + 농장 성장 학습 앱",
+  "start_url": "/tangram-farm/",
+  "display": "standalone",
+  "background_color": "#0f0f1a",
+  "theme_color": "#4F86C6",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
